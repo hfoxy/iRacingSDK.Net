@@ -261,6 +261,7 @@ namespace iRacingSDK
                 public string CarClassMaxFuelPct { get; set; }
                 public string CarClassWeightPenalty { get; set; }
                 public string CarClassColor { get; set; }
+                public double CarClassEstLapTime { get; set; }
                 public long IRating { get; set; }
                 public long LicLevel { get; set; }
                 public long LicSubLevel { get; set; }
