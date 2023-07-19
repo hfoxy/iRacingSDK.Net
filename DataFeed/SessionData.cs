@@ -75,7 +75,6 @@ namespace iRacingSDK
                                 CarScreenName = "",
                                 CarScreenNameShort = "",
                                 CarClassShortName = "",
-                                CarClassMaxFuel = "",
                                 CarClassWeightPenalty = "",
                                 CarClassColor = "",
                                 LicString = "",

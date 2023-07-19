@@ -36,6 +36,18 @@ namespace GenerateDataModels
             File.WriteAllText(@"GeneratedSessionData.cs", y.TransformText());
         }
 
+        public static string GetTypeCastFor(string fieldName, object sampleValue)
+        {
+            switch (fieldName)
+            {
+                case "SessionFlags":
+                    return "(iRacingSDK.SessionFlags)(int)";
+
+                default:
+                    return $"({GetTypeFor(fieldName, sampleValue)})";
+            }
+        }
+
         public static string GetTypeFor(string fieldName, object sampleValue)
         {
             switch(fieldName)
@@ -46,8 +58,8 @@ namespace GenerateDataModels
                 case "SessionFlags":
                     return "iRacingSDK.SessionFlags";
 
-                case "CarIdxSessionFlags":
-                    return "iRacingSDK.SessionFlags[]";
+                //case "CarIdxSessionFlags":
+                //    return "iRacingSDK.SessionFlags[]";
 
                 case "EngineWarnings":
                     return "iRacingSDK.EngineWarnings";

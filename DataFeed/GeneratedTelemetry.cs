@@ -71,7 +71,7 @@ namespace iRacingSDK
         /// </summary>
         public iRacingSDK.SessionFlags SessionFlags
         {
-            get { return (iRacingSDK.SessionFlags)this["SessionFlags"]; }
+            get { return (iRacingSDK.SessionFlags)(int)this["SessionFlags"]; }
         }
 
         /// <summary>
@@ -629,9 +629,9 @@ namespace iRacingSDK
         /// <summary>
         /// Session flags for each player
         /// </summary>
-        public iRacingSDK.SessionFlags[] CarIdxSessionFlags
+        public System.Int32[] CarIdxSessionFlags
         {
-            get { return (iRacingSDK.SessionFlags[])this["CarIdxSessionFlags"]; }
+            get { return (System.Int32[])this["CarIdxSessionFlags"]; }
         }
 
         /// <summary>
