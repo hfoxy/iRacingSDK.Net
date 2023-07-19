@@ -41,7 +41,22 @@ namespace GenerateDataModels
             switch (fieldName)
             {
                 case "SessionFlags":
-                    return "(iRacingSDK.SessionFlags)(int)";
+                    return "(iRacingSDK.SessionFlags)(System.Int32)";
+
+                case "CarIdxSessionFlags":
+                    return "(iRacingSDK.SessionFlags[])(System.Int32[])";
+                
+                case "EngineWarnings":
+                    return "(iRacingSDK.EngineWarnings)(System.Int32)";
+                
+                case "DisplayUnits":
+                    return "(iRacingSDK.DisplayUnits)(System.Int32)";
+
+                case "WeatherType":
+                    return "(iRacingSDK.WeatherType)(System.Int32)";
+
+                case "Skies":
+                    return "(iRacingSDK.Skies)(System.Int32)";
 
                 default:
                     return $"({GetTypeFor(fieldName, sampleValue)})";
@@ -58,8 +73,8 @@ namespace GenerateDataModels
                 case "SessionFlags":
                     return "iRacingSDK.SessionFlags";
 
-                //case "CarIdxSessionFlags":
-                //    return "iRacingSDK.SessionFlags[]";
+                case "CarIdxSessionFlags":
+                    return "iRacingSDK.SessionFlags[]";
 
                 case "EngineWarnings":
                     return "iRacingSDK.EngineWarnings";
