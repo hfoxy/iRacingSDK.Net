@@ -12,7 +12,7 @@ namespace iRacingSDK.Net.Tests
 
             var deserializer = new DeserializerBuilder().IgnoreUnmatchedProperties().Build();
             
-            var yaml = File.ReadAllText(@"C:\Users\dean\Downloads\data.yaml");
+            var yaml = File.ReadAllText(@"..\..\example.yaml");
 
             yaml = yaml.Replace(": *", ": ");
 

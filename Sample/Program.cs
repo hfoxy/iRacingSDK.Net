@@ -16,8 +16,6 @@
 // You should have received a copy of the GNU General Public License
 // along with iRacingSDK.  If not, see <http://www.gnu.org/licenses/>.
 
-using iRacingSDK;
-using Sample;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -25,6 +23,8 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms;
+using iRacingSDK;
+using Sample;
 
 namespace iRacingSDKSample
 {
@@ -34,7 +34,6 @@ namespace iRacingSDKSample
 
         public static void Main(string[] args)
         {
-            
             GuiSamples();
             //EventDataExample();
 
@@ -206,9 +205,9 @@ namespace iRacingSDKSample
             {
                 Console.Clear();
 
-                Console.WriteLine("Session Data");
+                Console.WriteLine(@"Session Data");
 
-                Console.WriteLine("Telemtary");
+                Console.WriteLine(@"Telemtary");
 
 				foreach(var kv in data.Telemetry)
                 {
