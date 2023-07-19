@@ -1,4 +1,4 @@
-#iRacingSDK.Net - Alternative
+# iRacingSDK.Net - Alternative
 -------------------------------
 
 [![Build status](https://dev.azure.com/MerlinCooper/iRacingSDK_Nuget/_apis/build/status/iRacingSDK_Nuget-.NET%20Desktop-CI?branchName=master)
