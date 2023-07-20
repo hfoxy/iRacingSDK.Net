@@ -35,14 +35,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Current update number
-        /// </summary>
-        public System.Int32 SessionTick
-        {
-            get { return (System.Int32)this["SessionTick"]; }
-        }
-
-        /// <summary>
         /// Session number
         /// </summary>
         public System.Int32 SessionNum
@@ -99,46 +91,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Total number of seconds in session
-        /// </summary>
-        public System.Double SessionTimeTotal
-        {
-            get { return (System.Double)this["SessionTimeTotal"]; }
-        }
-
-        /// <summary>
-        /// Total number of laps in session
-        /// </summary>
-        public System.Int32 SessionLapsTotal
-        {
-            get { return (System.Int32)this["SessionLapsTotal"]; }
-        }
-
-        /// <summary>
-        /// Joker laps remaining to be taken
-        /// </summary>
-        public System.Int32 SessionJokerLapsRemain
-        {
-            get { return (System.Int32)this["SessionJokerLapsRemain"]; }
-        }
-
-        /// <summary>
-        /// Player is currently completing a joker lap
-        /// </summary>
-        public System.Boolean SessionOnJokerLap
-        {
-            get { return (System.Boolean)this["SessionOnJokerLap"]; }
-        }
-
-        /// <summary>
-        /// Time of day in seconds
-        /// </summary>
-        public System.Single SessionTimeOfDay
-        {
-            get { return (System.Single)this["SessionTimeOfDay"]; }
-        }
-
-        /// <summary>
         /// The car index of the current person speaking on the radio
         /// </summary>
         public System.Int32 RadioTransmitCarIdx
@@ -167,7 +119,7 @@ namespace iRacingSDK
         /// </summary>
         public iRacingSDK.DisplayUnits DisplayUnits
         {
-            get { return (iRacingSDK.DisplayUnits)this["DisplayUnits"]; }
+            get { return (iRacingSDK.DisplayUnits)(System.Int32)this["DisplayUnits"]; }
         }
 
         /// <summary>
@@ -176,38 +128,6 @@ namespace iRacingSDK
         public System.Boolean DriverMarker
         {
             get { return (System.Boolean)this["DriverMarker"]; }
-        }
-
-        /// <summary>
-        /// Push to talk button state
-        /// </summary>
-        public System.Boolean PushToTalk
-        {
-            get { return (System.Boolean)this["PushToTalk"]; }
-        }
-
-        /// <summary>
-        /// Push to pass button state
-        /// </summary>
-        public System.Boolean PushToPass
-        {
-            get { return (System.Boolean)this["PushToPass"]; }
-        }
-
-        /// <summary>
-        /// Hybrid manual boost state
-        /// </summary>
-        public System.Boolean ManualBoost
-        {
-            get { return (System.Boolean)this["ManualBoost"]; }
-        }
-
-        /// <summary>
-        /// Hybrid manual no boost state
-        /// </summary>
-        public System.Boolean ManualNoBoost
-        {
-            get { return (System.Boolean)this["ManualNoBoost"]; }
         }
 
         /// <summary>
@@ -267,83 +187,11 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Percent of available tim fg thread took with a 1 sec avg
-        /// </summary>
-        public System.Single CpuUsageFG
-        {
-            get { return (System.Single)this["CpuUsageFG"]; }
-        }
-
-        /// <summary>
-        /// Percent of available tim gpu took with a 1 sec avg
-        /// </summary>
-        public System.Single GpuUsage
-        {
-            get { return (System.Single)this["GpuUsage"]; }
-        }
-
-        /// <summary>
-        /// Communications average latency
-        /// </summary>
-        public System.Single ChanAvgLatency
-        {
-            get { return (System.Single)this["ChanAvgLatency"]; }
-        }
-
-        /// <summary>
-        /// Communications latency
-        /// </summary>
-        public System.Single ChanLatency
-        {
-            get { return (System.Single)this["ChanLatency"]; }
-        }
-
-        /// <summary>
-        /// Communications quality
-        /// </summary>
-        public System.Single ChanQuality
-        {
-            get { return (System.Single)this["ChanQuality"]; }
-        }
-
-        /// <summary>
-        /// Partner communications quality
-        /// </summary>
-        public System.Single ChanPartnerQuality
-        {
-            get { return (System.Single)this["ChanPartnerQuality"]; }
-        }
-
-        /// <summary>
         /// Percent of available tim bg thread took with a 1 sec avg
         /// </summary>
         public System.Single CpuUsageBG
         {
             get { return (System.Single)this["CpuUsageBG"]; }
-        }
-
-        /// <summary>
-        /// Communications server clock skew
-        /// </summary>
-        public System.Single ChanClockSkew
-        {
-            get { return (System.Single)this["ChanClockSkew"]; }
-        }
-
-        /// <summary>
-        /// Memory page faults per second
-        /// </summary>
-        public System.Single MemPageFaultSec
-        {
-            get { return (System.Single)this["MemPageFaultSec"]; }
-        }
-
-        /// <summary>
-        /// Memory soft page faults per second
-        /// </summary>
-        public System.Single MemSoftPageFaultSec
-        {
-            get { return (System.Single)this["MemSoftPageFaultSec"]; }
         }
 
         /// <summary>
@@ -515,14 +363,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Track surface material type by car index
-        /// </summary>
-        public System.Int32[] CarIdxTrackSurfaceMaterial
-        {
-            get { return (System.Int32[])this["CarIdxTrackSurfaceMaterial"]; }
-        }
-
-        /// <summary>
         /// On pit road between the cones by car index
         /// </summary>
         public System.Boolean[] CarIdxOnPitRoad
@@ -544,14 +384,6 @@ namespace iRacingSDK
         public System.Int32[] CarIdxClassPosition
         {
             get { return (System.Int32[])this["CarIdxClassPosition"]; }
-        }
-
-        /// <summary>
-        /// Cars class id by car index
-        /// </summary>
-        public System.Int32[] CarIdxClass
-        {
-            get { return (System.Int32[])this["CarIdxClass"]; }
         }
 
         /// <summary>
@@ -971,11 +803,83 @@ namespace iRacingSDK
         }
 
         /// <summary>
+        /// Longitudinal acceleration (including gravity)
+        /// </summary>
+        public System.Single LongAccel
+        {
+            get { return (System.Single)this["LongAccel"]; }
+        }
+
+        /// <summary>
+        /// Lateral acceleration (including gravity)
+        /// </summary>
+        public System.Single LatAccel
+        {
+            get { return (System.Single)this["LatAccel"]; }
+        }
+
+        /// <summary>
+        /// Vertical acceleration (including gravity)
+        /// </summary>
+        public System.Single VertAccel
+        {
+            get { return (System.Single)this["VertAccel"]; }
+        }
+
+        /// <summary>
+        /// Roll rate
+        /// </summary>
+        public System.Single RollRate
+        {
+            get { return (System.Single)this["RollRate"]; }
+        }
+
+        /// <summary>
+        /// Pitch rate
+        /// </summary>
+        public System.Single PitchRate
+        {
+            get { return (System.Single)this["PitchRate"]; }
+        }
+
+        /// <summary>
+        /// Yaw rate
+        /// </summary>
+        public System.Single YawRate
+        {
+            get { return (System.Single)this["YawRate"]; }
+        }
+
+        /// <summary>
         /// GPS vehicle speed
         /// </summary>
         public System.Single Speed
         {
             get { return (System.Single)this["Speed"]; }
+        }
+
+        /// <summary>
+        /// X velocity
+        /// </summary>
+        public System.Single VelocityX
+        {
+            get { return (System.Single)this["VelocityX"]; }
+        }
+
+        /// <summary>
+        /// Y velocity
+        /// </summary>
+        public System.Single VelocityY
+        {
+            get { return (System.Single)this["VelocityY"]; }
+        }
+
+        /// <summary>
+        /// Z velocity
+        /// </summary>
+        public System.Single VelocityZ
+        {
+            get { return (System.Single)this["VelocityZ"]; }
         }
 
         /// <summary>
@@ -1019,7 +923,7 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Deprecated  set to TrackTempCrew
+        /// Temperature of track at start/finish line
         /// </summary>
         public System.Single TrackTemp
         {
@@ -1047,7 +951,7 @@ namespace iRacingSDK
         /// </summary>
         public iRacingSDK.WeatherType WeatherType
         {
-            get { return (iRacingSDK.WeatherType)this["WeatherType"]; }
+            get { return (iRacingSDK.WeatherType)(System.Int32)this["WeatherType"]; }
         }
 
         /// <summary>
@@ -1055,7 +959,7 @@ namespace iRacingSDK
         /// </summary>
         public iRacingSDK.Skies Skies
         {
-            get { return (iRacingSDK.Skies)this["Skies"]; }
+            get { return (iRacingSDK.Skies)(System.Int32)this["Skies"]; }
         }
 
         /// <summary>
@@ -1107,22 +1011,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Sun angle above horizon in radians
-        /// </summary>
-        public System.Single SolarAltitude
-        {
-            get { return (System.Single)this["SolarAltitude"]; }
-        }
-
-        /// <summary>
-        /// Sun angle clockwise from north in radians
-        /// </summary>
-        public System.Single SolarAzimuth
-        {
-            get { return (System.Single)this["SolarAzimuth"]; }
-        }
-
-        /// <summary>
         /// Status of driver change lap requirements
         /// </summary>
         public System.Int32 DCLapStatus
@@ -1144,46 +1032,6 @@ namespace iRacingSDK
         public System.Boolean OkToReloadTextures
         {
             get { return (System.Boolean)this["OkToReloadTextures"]; }
-        }
-
-        /// <summary>
-        /// True if the car_num texture will be loaded
-        /// </summary>
-        public System.Boolean LoadNumTextures
-        {
-            get { return (System.Boolean)this["LoadNumTextures"]; }
-        }
-
-        /// <summary>
-        /// Notify if car is to the left or right of driver
-        /// </summary>
-        public System.Int32 CarLeftRight
-        {
-            get { return (System.Int32)this["CarLeftRight"]; }
-        }
-
-        /// <summary>
-        /// True if pit stop is allowed for the current player
-        /// </summary>
-        public System.Boolean PitsOpen
-        {
-            get { return (System.Boolean)this["PitsOpen"]; }
-        }
-
-        /// <summary>
-        /// True if video capture system is enabled
-        /// </summary>
-        public System.Boolean VidCapEnabled
-        {
-            get { return (System.Boolean)this["VidCapEnabled"]; }
-        }
-
-        /// <summary>
-        /// True if video currently being captured
-        /// </summary>
-        public System.Boolean VidCapActive
-        {
-            get { return (System.Boolean)this["VidCapActive"]; }
         }
 
         /// <summary>
@@ -1224,150 +1072,6 @@ namespace iRacingSDK
         public System.Int32 FastRepairAvailable
         {
             get { return (System.Int32)this["FastRepairAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many left front tires used so far
-        /// </summary>
-        public System.Int32 LFTiresUsed
-        {
-            get { return (System.Int32)this["LFTiresUsed"]; }
-        }
-
-        /// <summary>
-        /// How many right front tires used so far
-        /// </summary>
-        public System.Int32 RFTiresUsed
-        {
-            get { return (System.Int32)this["RFTiresUsed"]; }
-        }
-
-        /// <summary>
-        /// How many left rear tires used so far
-        /// </summary>
-        public System.Int32 LRTiresUsed
-        {
-            get { return (System.Int32)this["LRTiresUsed"]; }
-        }
-
-        /// <summary>
-        /// How many right rear tires used so far
-        /// </summary>
-        public System.Int32 RRTiresUsed
-        {
-            get { return (System.Int32)this["RRTiresUsed"]; }
-        }
-
-        /// <summary>
-        /// How many left tire sets used so far
-        /// </summary>
-        public System.Int32 LeftTireSetsUsed
-        {
-            get { return (System.Int32)this["LeftTireSetsUsed"]; }
-        }
-
-        /// <summary>
-        /// How many right tire sets used so far
-        /// </summary>
-        public System.Int32 RightTireSetsUsed
-        {
-            get { return (System.Int32)this["RightTireSetsUsed"]; }
-        }
-
-        /// <summary>
-        /// How many front tire sets used so far
-        /// </summary>
-        public System.Int32 FrontTireSetsUsed
-        {
-            get { return (System.Int32)this["FrontTireSetsUsed"]; }
-        }
-
-        /// <summary>
-        /// How many rear tire sets used so far
-        /// </summary>
-        public System.Int32 RearTireSetsUsed
-        {
-            get { return (System.Int32)this["RearTireSetsUsed"]; }
-        }
-
-        /// <summary>
-        /// How many tire sets used so far
-        /// </summary>
-        public System.Int32 TireSetsUsed
-        {
-            get { return (System.Int32)this["TireSetsUsed"]; }
-        }
-
-        /// <summary>
-        /// How many left front tires are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 LFTiresAvailable
-        {
-            get { return (System.Int32)this["LFTiresAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many right front tires are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 RFTiresAvailable
-        {
-            get { return (System.Int32)this["RFTiresAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many left rear tires are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 LRTiresAvailable
-        {
-            get { return (System.Int32)this["LRTiresAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many right rear tires are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 RRTiresAvailable
-        {
-            get { return (System.Int32)this["RRTiresAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many left tire sets are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 LeftTireSetsAvailable
-        {
-            get { return (System.Int32)this["LeftTireSetsAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many right tire sets are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 RightTireSetsAvailable
-        {
-            get { return (System.Int32)this["RightTireSetsAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many front tire sets are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 FrontTireSetsAvailable
-        {
-            get { return (System.Int32)this["FrontTireSetsAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many rear tire sets are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 RearTireSetsAvailable
-        {
-            get { return (System.Int32)this["RearTireSetsAvailable"]; }
-        }
-
-        /// <summary>
-        /// How many tire sets are remaining  255 is unlimited
-        /// </summary>
-        public System.Int32 TireSetsAvailable
-        {
-            get { return (System.Int32)this["TireSetsAvailable"]; }
         }
 
         /// <summary>
@@ -1419,11 +1123,59 @@ namespace iRacingSDK
         }
 
         /// <summary>
+        /// Output torque on steering shaft
+        /// </summary>
+        public System.Single SteeringWheelTorque
+        {
+            get { return (System.Single)this["SteeringWheelTorque"]; }
+        }
+
+        /// <summary>
+        /// Force feedback % max torque on steering shaft unsigned
+        /// </summary>
+        public System.Single SteeringWheelPctTorque
+        {
+            get { return (System.Single)this["SteeringWheelPctTorque"]; }
+        }
+
+        /// <summary>
+        /// Force feedback % max torque on steering shaft signed
+        /// </summary>
+        public System.Single SteeringWheelPctTorqueSign
+        {
+            get { return (System.Single)this["SteeringWheelPctTorqueSign"]; }
+        }
+
+        /// <summary>
+        /// Force feedback % max torque on steering shaft signed stops
+        /// </summary>
+        public System.Single SteeringWheelPctTorqueSignStops
+        {
+            get { return (System.Single)this["SteeringWheelPctTorqueSignStops"]; }
+        }
+
+        /// <summary>
+        /// Force feedback % max damping
+        /// </summary>
+        public System.Single SteeringWheelPctDamper
+        {
+            get { return (System.Single)this["SteeringWheelPctDamper"]; }
+        }
+
+        /// <summary>
         /// Steering wheel max angle
         /// </summary>
         public System.Single SteeringWheelAngleMax
         {
             get { return (System.Single)this["SteeringWheelAngleMax"]; }
+        }
+
+        /// <summary>
+        /// DEPRECATED use DriverCarSLBlinkRPM instead
+        /// </summary>
+        public System.Single ShiftIndicatorPct
+        {
+            get { return (System.Single)this["ShiftIndicatorPct"]; }
         }
 
         /// <summary>
@@ -1459,27 +1211,11 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Raw clutch input 0=disengaged to 1=fully engaged
+        /// Peak torque mapping to direct input units for FFB
         /// </summary>
-        public System.Single ClutchRaw
+        public System.Single SteeringWheelPeakForceNm
         {
-            get { return (System.Single)this["ClutchRaw"]; }
-        }
-
-        /// <summary>
-        /// Raw handbrake input 0=handbrake released to 1=max force
-        /// </summary>
-        public System.Single HandbrakeRaw
-        {
-            get { return (System.Single)this["HandbrakeRaw"]; }
-        }
-
-        /// <summary>
-        /// true if abs is currently reducing brake force pressure
-        /// </summary>
-        public System.Boolean BrakeABSactive
-        {
-            get { return (System.Boolean)this["BrakeABSactive"]; }
+            get { return (System.Single)this["SteeringWheelPeakForceNm"]; }
         }
 
         /// <summary>
@@ -1487,7 +1223,15 @@ namespace iRacingSDK
         /// </summary>
         public iRacingSDK.EngineWarnings EngineWarnings
         {
-            get { return (iRacingSDK.EngineWarnings)this["EngineWarnings"]; }
+            get { return (iRacingSDK.EngineWarnings)(System.Int32)this["EngineWarnings"]; }
+        }
+
+        /// <summary>
+        /// Liters of fuel remaining
+        /// </summary>
+        public System.Single FuelLevel
+        {
+            get { return (System.Single)this["FuelLevel"]; }
         }
 
         /// <summary>
@@ -1547,110 +1291,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Pit service pending tire compound
-        /// </summary>
-        public System.Int32 PitSvTireCompound
-        {
-            get { return (System.Int32)this["PitSvTireCompound"]; }
-        }
-
-        /// <summary>
-        /// Push2Pass active or not
-        /// </summary>
-        public System.Boolean[] CarIdxP2P_Status
-        {
-            get { return (System.Boolean[])this["CarIdxP2P_Status"]; }
-        }
-
-        /// <summary>
-        /// Push2Pass count of usage (or remaining in Race)
-        /// </summary>
-        public System.Int32[] CarIdxP2P_Count
-        {
-            get { return (System.Int32[])this["CarIdxP2P_Count"]; }
-        }
-
-        /// <summary>
-        /// Force feedback % max torque on steering shaft unsigned
-        /// </summary>
-        public System.Single SteeringWheelPctTorque
-        {
-            get { return (System.Single)this["SteeringWheelPctTorque"]; }
-        }
-
-        /// <summary>
-        /// Force feedback % max torque on steering shaft signed
-        /// </summary>
-        public System.Single SteeringWheelPctTorqueSign
-        {
-            get { return (System.Single)this["SteeringWheelPctTorqueSign"]; }
-        }
-
-        /// <summary>
-        /// Force feedback % max torque on steering shaft signed stops
-        /// </summary>
-        public System.Single SteeringWheelPctTorqueSignStops
-        {
-            get { return (System.Single)this["SteeringWheelPctTorqueSignStops"]; }
-        }
-
-        /// <summary>
-        /// Force feedback % max smoothing
-        /// </summary>
-        public System.Single SteeringWheelPctSmoothing
-        {
-            get { return (System.Single)this["SteeringWheelPctSmoothing"]; }
-        }
-
-        /// <summary>
-        /// Force feedback % max damping
-        /// </summary>
-        public System.Single SteeringWheelPctDamper
-        {
-            get { return (System.Single)this["SteeringWheelPctDamper"]; }
-        }
-
-        /// <summary>
-        /// Force feedback limiter strength limits impacts and oscillation
-        /// </summary>
-        public System.Single SteeringWheelLimiter
-        {
-            get { return (System.Single)this["SteeringWheelLimiter"]; }
-        }
-
-        /// <summary>
-        /// Value of strength or max force slider in Nm for FFB
-        /// </summary>
-        public System.Single SteeringWheelMaxForceNm
-        {
-            get { return (System.Single)this["SteeringWheelMaxForceNm"]; }
-        }
-
-        /// <summary>
-        /// Peak torque mapping to direct input units for FFB
-        /// </summary>
-        public System.Single SteeringWheelPeakForceNm
-        {
-            get { return (System.Single)this["SteeringWheelPeakForceNm"]; }
-        }
-
-        /// <summary>
-        /// True if steering wheel force is using linear mode
-        /// </summary>
-        public System.Boolean SteeringWheelUseLinear
-        {
-            get { return (System.Boolean)this["SteeringWheelUseLinear"]; }
-        }
-
-        /// <summary>
-        /// DEPRECATED use DriverCarSLBlinkRPM instead
-        /// </summary>
-        public System.Single ShiftIndicatorPct
-        {
-            get { return (System.Single)this["ShiftIndicatorPct"]; }
-        }
-
-        /// <summary>
         /// Replay playback speed
         /// </summary>
         public System.Int32 ReplayPlaySpeed
@@ -1683,291 +1323,11 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Players LF Tire Sound rumblestrip pitch
+        /// In car front anti roll bar adjustment
         /// </summary>
-        public System.Single TireLF_RumblePitch
+        public System.Single dcAntiRollFront
         {
-            get { return (System.Single)this["TireLF_RumblePitch"]; }
-        }
-
-        /// <summary>
-        /// Players RF Tire Sound rumblestrip pitch
-        /// </summary>
-        public System.Single TireRF_RumblePitch
-        {
-            get { return (System.Single)this["TireRF_RumblePitch"]; }
-        }
-
-        /// <summary>
-        /// Players LR Tire Sound rumblestrip pitch
-        /// </summary>
-        public System.Single TireLR_RumblePitch
-        {
-            get { return (System.Single)this["TireLR_RumblePitch"]; }
-        }
-
-        /// <summary>
-        /// Players RR Tire Sound rumblestrip pitch
-        /// </summary>
-        public System.Single TireRR_RumblePitch
-        {
-            get { return (System.Single)this["TireRR_RumblePitch"]; }
-        }
-
-        /// <summary>
-        /// 1=Garage screen is visible
-        /// </summary>
-        public System.Boolean IsGarageVisible
-        {
-            get { return (System.Boolean)this["IsGarageVisible"]; }
-        }
-
-        /// <summary>
-        /// Output torque on steering shaft at 360 Hz
-        /// </summary>
-        public System.Single[] SteeringWheelTorque_ST
-        {
-            get { return (System.Single[])this["SteeringWheelTorque_ST"]; }
-        }
-
-        /// <summary>
-        /// Output torque on steering shaft
-        /// </summary>
-        public System.Single SteeringWheelTorque
-        {
-            get { return (System.Single)this["SteeringWheelTorque"]; }
-        }
-
-        /// <summary>
-        /// Z velocity
-        /// </summary>
-        public System.Single[] VelocityZ_ST
-        {
-            get { return (System.Single[])this["VelocityZ_ST"]; }
-        }
-
-        /// <summary>
-        /// Y velocity
-        /// </summary>
-        public System.Single[] VelocityY_ST
-        {
-            get { return (System.Single[])this["VelocityY_ST"]; }
-        }
-
-        /// <summary>
-        /// X velocity
-        /// </summary>
-        public System.Single[] VelocityX_ST
-        {
-            get { return (System.Single[])this["VelocityX_ST"]; }
-        }
-
-        /// <summary>
-        /// Z velocity
-        /// </summary>
-        public System.Single VelocityZ
-        {
-            get { return (System.Single)this["VelocityZ"]; }
-        }
-
-        /// <summary>
-        /// Y velocity
-        /// </summary>
-        public System.Single VelocityY
-        {
-            get { return (System.Single)this["VelocityY"]; }
-        }
-
-        /// <summary>
-        /// X velocity
-        /// </summary>
-        public System.Single VelocityX
-        {
-            get { return (System.Single)this["VelocityX"]; }
-        }
-
-        /// <summary>
-        /// Yaw rate at 360 Hz
-        /// </summary>
-        public System.Single[] YawRate_ST
-        {
-            get { return (System.Single[])this["YawRate_ST"]; }
-        }
-
-        /// <summary>
-        /// Pitch rate at 360 Hz
-        /// </summary>
-        public System.Single[] PitchRate_ST
-        {
-            get { return (System.Single[])this["PitchRate_ST"]; }
-        }
-
-        /// <summary>
-        /// Roll rate at 360 Hz
-        /// </summary>
-        public System.Single[] RollRate_ST
-        {
-            get { return (System.Single[])this["RollRate_ST"]; }
-        }
-
-        /// <summary>
-        /// Yaw rate
-        /// </summary>
-        public System.Single YawRate
-        {
-            get { return (System.Single)this["YawRate"]; }
-        }
-
-        /// <summary>
-        /// Pitch rate
-        /// </summary>
-        public System.Single PitchRate
-        {
-            get { return (System.Single)this["PitchRate"]; }
-        }
-
-        /// <summary>
-        /// Roll rate
-        /// </summary>
-        public System.Single RollRate
-        {
-            get { return (System.Single)this["RollRate"]; }
-        }
-
-        /// <summary>
-        /// Vertical acceleration (including gravity) at 360 Hz
-        /// </summary>
-        public System.Single[] VertAccel_ST
-        {
-            get { return (System.Single[])this["VertAccel_ST"]; }
-        }
-
-        /// <summary>
-        /// Lateral acceleration (including gravity) at 360 Hz
-        /// </summary>
-        public System.Single[] LatAccel_ST
-        {
-            get { return (System.Single[])this["LatAccel_ST"]; }
-        }
-
-        /// <summary>
-        /// Longitudinal acceleration (including gravity) at 360 Hz
-        /// </summary>
-        public System.Single[] LongAccel_ST
-        {
-            get { return (System.Single[])this["LongAccel_ST"]; }
-        }
-
-        /// <summary>
-        /// Vertical acceleration (including gravity)
-        /// </summary>
-        public System.Single VertAccel
-        {
-            get { return (System.Single)this["VertAccel"]; }
-        }
-
-        /// <summary>
-        /// Lateral acceleration (including gravity)
-        /// </summary>
-        public System.Single LatAccel
-        {
-            get { return (System.Single)this["LatAccel"]; }
-        }
-
-        /// <summary>
-        /// Longitudinal acceleration (including gravity)
-        /// </summary>
-        public System.Single LongAccel
-        {
-            get { return (System.Single)this["LongAccel"]; }
-        }
-
-        /// <summary>
-        /// In car trigger car starter
-        /// </summary>
-        public System.Boolean dcStarter
-        {
-            get { return (System.Boolean)this["dcStarter"]; }
-        }
-
-        /// <summary>
-        /// In car traction control active
-        /// </summary>
-        public System.Boolean dcPitSpeedLimiterToggle
-        {
-            get { return (System.Boolean)this["dcPitSpeedLimiterToggle"]; }
-        }
-
-        /// <summary>
-        /// In car headlight flash control active
-        /// </summary>
-        public System.Boolean dcHeadlightFlash
-        {
-            get { return (System.Boolean)this["dcHeadlightFlash"]; }
-        }
-
-        /// <summary>
-        /// Pitstop rf tire change request
-        /// </summary>
-        public System.Single dpRFTireChange
-        {
-            get { return (System.Single)this["dpRFTireChange"]; }
-        }
-
-        /// <summary>
-        /// Pitstop lf tire change request
-        /// </summary>
-        public System.Single dpLFTireChange
-        {
-            get { return (System.Single)this["dpLFTireChange"]; }
-        }
-
-        /// <summary>
-        /// Pitstop rr tire change request
-        /// </summary>
-        public System.Single dpRRTireChange
-        {
-            get { return (System.Single)this["dpRRTireChange"]; }
-        }
-
-        /// <summary>
-        /// Pitstop lr tire change request
-        /// </summary>
-        public System.Single dpLRTireChange
-        {
-            get { return (System.Single)this["dpLRTireChange"]; }
-        }
-
-        /// <summary>
-        /// Pitstop fuel fill flag
-        /// </summary>
-        public System.Single dpFuelFill
-        {
-            get { return (System.Single)this["dpFuelFill"]; }
-        }
-
-        /// <summary>
-        /// Pitstop windshield tearoff
-        /// </summary>
-        public System.Single dpWindshieldTearoff
-        {
-            get { return (System.Single)this["dpWindshieldTearoff"]; }
-        }
-
-        /// <summary>
-        /// Pitstop fuel add amount
-        /// </summary>
-        public System.Single dpFuelAddKg
-        {
-            get { return (System.Single)this["dpFuelAddKg"]; }
-        }
-
-        /// <summary>
-        /// Pitstop fast repair set
-        /// </summary>
-        public System.Single dpFastRepair
-        {
-            get { return (System.Single)this["dpFastRepair"]; }
+            get { return (System.Single)this["dcAntiRollFront"]; }
         }
 
         /// <summary>
@@ -1976,38 +1336,6 @@ namespace iRacingSDK
         public System.Single dcBrakeBias
         {
             get { return (System.Single)this["dcBrakeBias"]; }
-        }
-
-        /// <summary>
-        /// Pitstop lf tire cold pressure adjustment
-        /// </summary>
-        public System.Single dpLFTireColdPress
-        {
-            get { return (System.Single)this["dpLFTireColdPress"]; }
-        }
-
-        /// <summary>
-        /// Pitstop rf cold tire pressure adjustment
-        /// </summary>
-        public System.Single dpRFTireColdPress
-        {
-            get { return (System.Single)this["dpRFTireColdPress"]; }
-        }
-
-        /// <summary>
-        /// Pitstop lr tire cold pressure adjustment
-        /// </summary>
-        public System.Single dpLRTireColdPress
-        {
-            get { return (System.Single)this["dpLRTireColdPress"]; }
-        }
-
-        /// <summary>
-        /// Pitstop rr cold tire pressure adjustment
-        /// </summary>
-        public System.Single dpRRTireColdPress
-        {
-            get { return (System.Single)this["dpRRTireColdPress"]; }
         }
 
         /// <summary>
@@ -2027,19 +1355,51 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// Engine fuel used instantaneous
+        /// In car throttle shape adjustment
         /// </summary>
-        public System.Single FuelUsePerHour
+        public System.Single dcThrottleShape
         {
-            get { return (System.Single)this["FuelUsePerHour"]; }
+            get { return (System.Single)this["dcThrottleShape"]; }
         }
 
         /// <summary>
-        /// Engine voltage
+        /// In car fuel mixture adjustment
         /// </summary>
-        public System.Single Voltage
+        public System.Single dcFuelMixture
         {
-            get { return (System.Single)this["Voltage"]; }
+            get { return (System.Single)this["dcFuelMixture"]; }
+        }
+
+        /// <summary>
+        /// Pitstop qtape adjustment
+        /// </summary>
+        public System.Single dpQtape
+        {
+            get { return (System.Single)this["dpQtape"]; }
+        }
+
+        /// <summary>
+        /// Pitstop wedge adjustment
+        /// </summary>
+        public System.Single dpWedgeAdj
+        {
+            get { return (System.Single)this["dpWedgeAdj"]; }
+        }
+
+        /// <summary>
+        /// In car rear anti roll bar adjustment
+        /// </summary>
+        public System.Single dcAntiRollRear
+        {
+            get { return (System.Single)this["dcAntiRollRear"]; }
+        }
+
+        /// <summary>
+        /// Pitstop rear wing adjustment
+        /// </summary>
+        public System.Single dpRWingSetting
+        {
+            get { return (System.Single)this["dpRWingSetting"]; }
         }
 
         /// <summary>
@@ -2067,6 +1427,14 @@ namespace iRacingSDK
         }
 
         /// <summary>
+        /// Engine fuel used instantaneous
+        /// </summary>
+        public System.Single FuelUsePerHour
+        {
+            get { return (System.Single)this["FuelUsePerHour"]; }
+        }
+
+        /// <summary>
         /// Engine oil temperature
         /// </summary>
         public System.Single OilTemp
@@ -2091,155 +1459,19 @@ namespace iRacingSDK
         }
 
         /// <summary>
+        /// Engine voltage
+        /// </summary>
+        public System.Single Voltage
+        {
+            get { return (System.Single)this["Voltage"]; }
+        }
+
+        /// <summary>
         /// Engine manifold pressure
         /// </summary>
         public System.Single ManifoldPress
         {
             get { return (System.Single)this["ManifoldPress"]; }
-        }
-
-        /// <summary>
-        /// Liters of fuel remaining
-        /// </summary>
-        public System.Single FuelLevel
-        {
-            get { return (System.Single)this["FuelLevel"]; }
-        }
-
-        /// <summary>
-        /// Engine0Engine rpm
-        /// </summary>
-        public System.Single Engine0_RPM
-        {
-            get { return (System.Single)this["Engine0_RPM"]; }
-        }
-
-        /// <summary>
-        /// RF brake line pressure
-        /// </summary>
-        public System.Single RFbrakeLinePress
-        {
-            get { return (System.Single)this["RFbrakeLinePress"]; }
-        }
-
-        /// <summary>
-        /// RF tire cold pressure  as set in the garage
-        /// </summary>
-        public System.Single RFcoldPressure
-        {
-            get { return (System.Single)this["RFcoldPressure"]; }
-        }
-
-        /// <summary>
-        /// RF tire left carcass temperature
-        /// </summary>
-        public System.Single RFtempCL
-        {
-            get { return (System.Single)this["RFtempCL"]; }
-        }
-
-        /// <summary>
-        /// RF tire middle carcass temperature
-        /// </summary>
-        public System.Single RFtempCM
-        {
-            get { return (System.Single)this["RFtempCM"]; }
-        }
-
-        /// <summary>
-        /// RF tire right carcass temperature
-        /// </summary>
-        public System.Single RFtempCR
-        {
-            get { return (System.Single)this["RFtempCR"]; }
-        }
-
-        /// <summary>
-        /// RF tire left percent tread remaining
-        /// </summary>
-        public System.Single RFwearL
-        {
-            get { return (System.Single)this["RFwearL"]; }
-        }
-
-        /// <summary>
-        /// RF tire middle percent tread remaining
-        /// </summary>
-        public System.Single RFwearM
-        {
-            get { return (System.Single)this["RFwearM"]; }
-        }
-
-        /// <summary>
-        /// RF tire right percent tread remaining
-        /// </summary>
-        public System.Single RFwearR
-        {
-            get { return (System.Single)this["RFwearR"]; }
-        }
-
-        /// <summary>
-        /// LF brake line pressure
-        /// </summary>
-        public System.Single LFbrakeLinePress
-        {
-            get { return (System.Single)this["LFbrakeLinePress"]; }
-        }
-
-        /// <summary>
-        /// LF tire cold pressure  as set in the garage
-        /// </summary>
-        public System.Single LFcoldPressure
-        {
-            get { return (System.Single)this["LFcoldPressure"]; }
-        }
-
-        /// <summary>
-        /// LF tire left carcass temperature
-        /// </summary>
-        public System.Single LFtempCL
-        {
-            get { return (System.Single)this["LFtempCL"]; }
-        }
-
-        /// <summary>
-        /// LF tire middle carcass temperature
-        /// </summary>
-        public System.Single LFtempCM
-        {
-            get { return (System.Single)this["LFtempCM"]; }
-        }
-
-        /// <summary>
-        /// LF tire right carcass temperature
-        /// </summary>
-        public System.Single LFtempCR
-        {
-            get { return (System.Single)this["LFtempCR"]; }
-        }
-
-        /// <summary>
-        /// LF tire left percent tread remaining
-        /// </summary>
-        public System.Single LFwearL
-        {
-            get { return (System.Single)this["LFwearL"]; }
-        }
-
-        /// <summary>
-        /// LF tire middle percent tread remaining
-        /// </summary>
-        public System.Single LFwearM
-        {
-            get { return (System.Single)this["LFwearM"]; }
-        }
-
-        /// <summary>
-        /// LF tire right percent tread remaining
-        /// </summary>
-        public System.Single LFwearR
-        {
-            get { return (System.Single)this["LFwearR"]; }
         }
 
         /// <summary>
@@ -2371,35 +1603,131 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// LR shock deflection
+        /// RF brake line pressure
         /// </summary>
-        public System.Single LRshockDefl
+        public System.Single RFbrakeLinePress
         {
-            get { return (System.Single)this["LRshockDefl"]; }
+            get { return (System.Single)this["RFbrakeLinePress"]; }
         }
 
         /// <summary>
-        /// LR shock deflection at 360 Hz
+        /// RF tire cold pressure  as set in the garage
         /// </summary>
-        public System.Single[] LRshockDefl_ST
+        public System.Single RFcoldPressure
         {
-            get { return (System.Single[])this["LRshockDefl_ST"]; }
+            get { return (System.Single)this["RFcoldPressure"]; }
         }
 
         /// <summary>
-        /// LR shock velocity
+        /// RF tire left carcass temperature
         /// </summary>
-        public System.Single LRshockVel
+        public System.Single RFtempCL
         {
-            get { return (System.Single)this["LRshockVel"]; }
+            get { return (System.Single)this["RFtempCL"]; }
         }
 
         /// <summary>
-        /// LR shock velocity at 360 Hz
+        /// RF tire middle carcass temperature
         /// </summary>
-        public System.Single[] LRshockVel_ST
+        public System.Single RFtempCM
         {
-            get { return (System.Single[])this["LRshockVel_ST"]; }
+            get { return (System.Single)this["RFtempCM"]; }
+        }
+
+        /// <summary>
+        /// RF tire right carcass temperature
+        /// </summary>
+        public System.Single RFtempCR
+        {
+            get { return (System.Single)this["RFtempCR"]; }
+        }
+
+        /// <summary>
+        /// RF tire left percent tread remaining
+        /// </summary>
+        public System.Single RFwearL
+        {
+            get { return (System.Single)this["RFwearL"]; }
+        }
+
+        /// <summary>
+        /// RF tire middle percent tread remaining
+        /// </summary>
+        public System.Single RFwearM
+        {
+            get { return (System.Single)this["RFwearM"]; }
+        }
+
+        /// <summary>
+        /// RF tire right percent tread remaining
+        /// </summary>
+        public System.Single RFwearR
+        {
+            get { return (System.Single)this["RFwearR"]; }
+        }
+
+        /// <summary>
+        /// LF brake line pressure
+        /// </summary>
+        public System.Single LFbrakeLinePress
+        {
+            get { return (System.Single)this["LFbrakeLinePress"]; }
+        }
+
+        /// <summary>
+        /// LF tire cold pressure  as set in the garage
+        /// </summary>
+        public System.Single LFcoldPressure
+        {
+            get { return (System.Single)this["LFcoldPressure"]; }
+        }
+
+        /// <summary>
+        /// LF tire left carcass temperature
+        /// </summary>
+        public System.Single LFtempCL
+        {
+            get { return (System.Single)this["LFtempCL"]; }
+        }
+
+        /// <summary>
+        /// LF tire middle carcass temperature
+        /// </summary>
+        public System.Single LFtempCM
+        {
+            get { return (System.Single)this["LFtempCM"]; }
+        }
+
+        /// <summary>
+        /// LF tire right carcass temperature
+        /// </summary>
+        public System.Single LFtempCR
+        {
+            get { return (System.Single)this["LFtempCR"]; }
+        }
+
+        /// <summary>
+        /// LF tire left percent tread remaining
+        /// </summary>
+        public System.Single LFwearL
+        {
+            get { return (System.Single)this["LFwearL"]; }
+        }
+
+        /// <summary>
+        /// LF tire middle percent tread remaining
+        /// </summary>
+        public System.Single LFwearM
+        {
+            get { return (System.Single)this["LFwearM"]; }
+        }
+
+        /// <summary>
+        /// LF tire right percent tread remaining
+        /// </summary>
+        public System.Single LFwearR
+        {
+            get { return (System.Single)this["LFwearR"]; }
         }
 
         /// <summary>
@@ -2411,14 +1739,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// RR shock deflection at 360 Hz
-        /// </summary>
-        public System.Single[] RRshockDefl_ST
-        {
-            get { return (System.Single[])this["RRshockDefl_ST"]; }
-        }
-
-        /// <summary>
         /// RR shock velocity
         /// </summary>
         public System.Single RRshockVel
@@ -2427,43 +1747,19 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// RR shock velocity at 360 Hz
+        /// LR shock deflection
         /// </summary>
-        public System.Single[] RRshockVel_ST
+        public System.Single LRshockDefl
         {
-            get { return (System.Single[])this["RRshockVel_ST"]; }
+            get { return (System.Single)this["LRshockDefl"]; }
         }
 
         /// <summary>
-        /// LF shock deflection
+        /// LR shock velocity
         /// </summary>
-        public System.Single LFshockDefl
+        public System.Single LRshockVel
         {
-            get { return (System.Single)this["LFshockDefl"]; }
-        }
-
-        /// <summary>
-        /// LF shock deflection at 360 Hz
-        /// </summary>
-        public System.Single[] LFshockDefl_ST
-        {
-            get { return (System.Single[])this["LFshockDefl_ST"]; }
-        }
-
-        /// <summary>
-        /// LF shock velocity
-        /// </summary>
-        public System.Single LFshockVel
-        {
-            get { return (System.Single)this["LFshockVel"]; }
-        }
-
-        /// <summary>
-        /// LF shock velocity at 360 Hz
-        /// </summary>
-        public System.Single[] LFshockVel_ST
-        {
-            get { return (System.Single[])this["LFshockVel_ST"]; }
+            get { return (System.Single)this["LRshockVel"]; }
         }
 
         /// <summary>
@@ -2475,14 +1771,6 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// RF shock deflection at 360 Hz
-        /// </summary>
-        public System.Single[] RFshockDefl_ST
-        {
-            get { return (System.Single[])this["RFshockDefl_ST"]; }
-        }
-
-        /// <summary>
         /// RF shock velocity
         /// </summary>
         public System.Single RFshockVel
@@ -2491,11 +1779,51 @@ namespace iRacingSDK
         }
 
         /// <summary>
-        /// RF shock velocity at 360 Hz
+        /// LF shock deflection
         /// </summary>
-        public System.Single[] RFshockVel_ST
+        public System.Single LFshockDefl
         {
-            get { return (System.Single[])this["RFshockVel_ST"]; }
+            get { return (System.Single)this["LFshockDefl"]; }
+        }
+
+        /// <summary>
+        /// LF shock velocity
+        /// </summary>
+        public System.Single LFshockVel
+        {
+            get { return (System.Single)this["LFshockVel"]; }
+        }
+
+        /// <summary>
+        /// RRSH shock deflection
+        /// </summary>
+        public System.Single RRSHshockDefl
+        {
+            get { return (System.Single)this["RRSHshockDefl"]; }
+        }
+
+        /// <summary>
+        /// LRSH shock deflection
+        /// </summary>
+        public System.Single LRSHshockDefl
+        {
+            get { return (System.Single)this["LRSHshockDefl"]; }
+        }
+
+        /// <summary>
+        /// RFSH shock deflection
+        /// </summary>
+        public System.Single RFSHshockDefl
+        {
+            get { return (System.Single)this["RFSHshockDefl"]; }
+        }
+
+        /// <summary>
+        /// LFSH shock deflection
+        /// </summary>
+        public System.Single LFSHshockDefl
+        {
+            get { return (System.Single)this["LFSHshockDefl"]; }
         }
 
         /// <summary>

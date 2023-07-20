@@ -1,3 +1,5 @@
+
+
 // This file is part of iRacingSDK.
 //
 // Copyright 2014 Dean Netherton
@@ -17,6 +19,7 @@
 // along with iRacingSDK.  If not, see <http://www.gnu.org/licenses/>.
 
 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +28,12 @@ namespace iRacingSDK
 {
     public partial class SessionData
     {
+
         public partial class _WeekendInfo
         {
             public string TrackName { get; set; }
             public long TrackID { get; set; }
             public string TrackLength { get; set; }
-            public string TrackLengthOfficial { get; set; }
             public string TrackDisplayName { get; set; }
             public string TrackDisplayShortName { get; set; }
             public string TrackConfigName { get; set; }
@@ -43,7 +46,6 @@ namespace iRacingSDK
             public long TrackNumTurns { get; set; }
             public string TrackPitSpeedLimit { get; set; }
             public string TrackType { get; set; }
-            public string TrackDirection { get; set; }
             public string TrackWeatherType { get; set; }
             public string TrackSkies { get; set; }
             public string TrackSurfaceTemp { get; set; }
@@ -55,7 +57,6 @@ namespace iRacingSDK
             public string TrackFogLevel { get; set; }
             public long TrackCleanup { get; set; }
             public long TrackDynamicTrack { get; set; }
-            public string TrackVersion { get; set; }
             public long SeriesID { get; set; }
             public long SeasonID { get; set; }
             public long SessionID { get; set; }
@@ -73,10 +74,6 @@ namespace iRacingSDK
             public long QualifierMustStartRace { get; set; }
             public long NumCarClasses { get; set; }
             public long NumCarTypes { get; set; }
-            public long HeatRacing { get; set; }
-            public string BuildType { get; set; }
-            public string BuildTarget { get; set; }
-            public string BuildVersion { get; set; }
 
             public partial class _WeekendOptions
             {
@@ -85,7 +82,6 @@ namespace iRacingSDK
                 public string QualifyScoring { get; set; }
                 public string CourseCautions { get; set; }
                 public long StandingStart { get; set; }
-                public long ShortParadeLap { get; set; }
                 public string Restarts { get; set; }
                 public string WeatherType { get; set; }
                 public string Skies { get; set; }
@@ -94,9 +90,6 @@ namespace iRacingSDK
                 public string WeatherTemp { get; set; }
                 public string RelativeHumidity { get; set; }
                 public string FogLevel { get; set; }
-                public string TimeOfDay { get; set; }
-                public string Date { get; set; }
-                public long EarthRotationSpeedupFactor { get; set; }
                 public long Unofficial { get; set; }
                 public string CommercialMode { get; set; }
                 public string NightMode { get; set; }
@@ -105,8 +98,16 @@ namespace iRacingSDK
                 public long HasOpenRegistration { get; set; }
                 public long HardcoreLevel { get; set; }
                 public long NumJokerLaps { get; set; }
-                public long IncidentLimit { get; set; }
-                public long FastRepairsLimit { get; set; }
+                public string IncidentLimit { get; set; }
+                public long _IncidentLimit
+                {
+                    get { return IncidentLimit == "unlimited" ? long.MaxValue : long.Parse(IncidentLimit); }
+                }
+                public string FastRepairsLimit { get; set; }
+                public long _FastRepairsLimit
+                {
+                    get { return FastRepairsLimit == "unlimited" ? long.MaxValue : long.Parse(FastRepairsLimit); }
+                }
                 public long GreenWhiteCheckeredLimit { get; set; }
             }
 
@@ -132,12 +133,6 @@ namespace iRacingSDK
                 public long SessionNumLapsToAvg { get; set; }
                 public string SessionType { get; set; }
                 public string SessionTrackRubberState { get; set; }
-                public string SessionName { get; set; }
-                public string SessionSubType { get; set; }
-                public long SessionSkipped { get; set; }
-                public long SessionRunGroupsUsed { get; set; }
-                public long SessionEnforceTireCompoundChange { get; set; }
-
                 public partial class _ResultsPositions
                 {
                     public long Position { get; set; }
@@ -150,7 +145,6 @@ namespace iRacingSDK
                     public double LastTime { get; set; }
                     public long LapsLed { get; set; }
                     public long LapsComplete { get; set; }
-                    public long JokerLapsComplete { get; set; }
                     public double LapsDriven { get; set; }
                     public long Incidents { get; set; }
                     public long ReasonOutId { get; set; }
@@ -158,7 +152,6 @@ namespace iRacingSDK
                 }
 
                 public _ResultsPositions[] ResultsPositions { get; set; }
-
                 public partial class _ResultsFastestLap
                 {
                     public long CarIdx { get; set; }
@@ -180,29 +173,12 @@ namespace iRacingSDK
 
         public _SessionInfo SessionInfo { get; set; }
 
-        public partial class _QualifyResultsInfo
-        {
-            public partial class _Results
-            {
-                public long Position { get; set; }
-                public long ClassPosition { get; set; }
-                public long CarIdx { get; set; }
-                public long FastestLap { get; set; }
-                public double FastestTime { get; set; }
-            }
-
-            public _Results[] Results { get; set; }
-        }
-
-        public _QualifyResultsInfo QualifyResultsInfo { get; set; }
-
         public partial class _CameraInfo
         {
             public partial class _Groups
             {
                 public long GroupNum { get; set; }
                 public string GroupName { get; set; }
-
                 public partial class _Cameras
                 {
                     public long CameraNum { get; set; }
@@ -220,7 +196,6 @@ namespace iRacingSDK
         public partial class _RadioInfo
         {
             public long SelectedRadioNum { get; set; }
-
             public partial class _Radios
             {
                 public long RadioNum { get; set; }
@@ -228,7 +203,6 @@ namespace iRacingSDK
                 public long NumFrequencies { get; set; }
                 public long TunedToFrequencyNum { get; set; }
                 public long ScanningIsOn { get; set; }
-
                 public partial class _Frequencies
                 {
                     public long FrequencyNum { get; set; }
@@ -255,34 +229,25 @@ namespace iRacingSDK
         public partial class _DriverInfo
         {
             public long DriverCarIdx { get; set; }
-            public long DriverUserID { get; set; }
             public long PaceCarIdx { get; set; }
             public double DriverHeadPosX { get; set; }
             public double DriverHeadPosY { get; set; }
             public double DriverHeadPosZ { get; set; }
-            public long DriverCarIsElectric { get; set; }
             public double DriverCarIdleRPM { get; set; }
             public double DriverCarRedLine { get; set; }
-            public long DriverCarEngCylinderCount { get; set; }
             public double DriverCarFuelKgPerLtr { get; set; }
             public double DriverCarFuelMaxLtr { get; set; }
             public double DriverCarMaxFuelPct { get; set; }
-            public long DriverCarGearNumForward { get; set; }
-            public long DriverCarGearNeutral { get; set; }
-            public long DriverCarGearReverse { get; set; }
             public double DriverCarSLFirstRPM { get; set; }
             public double DriverCarSLShiftRPM { get; set; }
             public double DriverCarSLLastRPM { get; set; }
             public double DriverCarSLBlinkRPM { get; set; }
-            public string DriverCarVersion { get; set; }
             public double DriverPitTrkPct { get; set; }
             public double DriverCarEstLapTime { get; set; }
             public string DriverSetupName { get; set; }
             public long DriverSetupIsModified { get; set; }
             public string DriverSetupLoadTypeName { get; set; }
             public long DriverSetupPassedTech { get; set; }
-            public long DriverIncidentCount { get; set; }
-
             public partial class _Drivers
             {
                 public long CarIdx { get; set; }
@@ -320,16 +285,9 @@ namespace iRacingSDK
                 public string CarDesignStr { get; set; }
                 public string HelmetDesignStr { get; set; }
                 public string SuitDesignStr { get; set; }
-                public long BodyType { get; set; }
-                public long FaceType { get; set; }
-                public long HelmetType { get; set; }
                 public string CarNumberDesignStr { get; set; }
                 public long CarSponsor_1 { get; set; }
                 public long CarSponsor_2 { get; set; }
-                public string ClubName { get; set; }
-                public long ClubID { get; set; }
-                public string DivisionName { get; set; }
-                public long DivisionID { get; set; }
                 public long CurDriverIncidentCount { get; set; }
                 public long TeamIncidentCount { get; set; }
             }
@@ -351,150 +309,5 @@ namespace iRacingSDK
         }
 
         public _SplitTimeInfo SplitTimeInfo { get; set; }
-
-        public partial class _CarSetup
-        {
-            public long UpdateCount { get; set; }
-
-            public partial class _Tires
-            {
-                public partial class _LeftFront
-                {
-                    public string StartingPressure { get; set; }
-                    public string LastHotPressure { get; set; }
-                    public string LastTempsOMI { get; set; }
-                    public string TreadRemaining { get; set; }
-                }
-
-                public _LeftFront LeftFront { get; set; }
-
-                public partial class _LeftRear
-                {
-                    public string StartingPressure { get; set; }
-                    public string LastHotPressure { get; set; }
-                    public string LastTempsOMI { get; set; }
-                    public string TreadRemaining { get; set; }
-                }
-
-                public _LeftRear LeftRear { get; set; }
-
-                public partial class _RightFront
-                {
-                    public string StartingPressure { get; set; }
-                    public string LastHotPressure { get; set; }
-                    public string LastTempsIMO { get; set; }
-                    public string TreadRemaining { get; set; }
-                }
-
-                public _RightFront RightFront { get; set; }
-
-                public partial class _RightRear
-                {
-                    public string StartingPressure { get; set; }
-                    public string LastHotPressure { get; set; }
-                    public string LastTempsIMO { get; set; }
-                    public string TreadRemaining { get; set; }
-                }
-
-                public _RightRear RightRear { get; set; }
-            }
-
-            public _Tires Tires { get; set; }
-
-            public partial class _Chassis
-            {
-                public partial class _Front
-                {
-                    public string ArbSize { get; set; }
-                    public long ArbSetting { get; set; }
-                    public string ToeIn { get; set; }
-                    public double BumpRubberLength { get; set; }
-                    public string CrossWeight { get; set; }
-                    public string NoseWeight { get; set; }
-                }
-
-                public _Front Front { get; set; }
-
-                public partial class _LeftFront
-                {
-                    public string CornerWeight { get; set; }
-                    public string RideHeight { get; set; }
-                    public string FenderHeight { get; set; }
-                    public string SpringRate { get; set; }
-                    public string SpringPerchOffset { get; set; }
-                    public string BumpStiffness { get; set; }
-                    public string ReboundStiffness { get; set; }
-                    public string Camber { get; set; }
-                }
-
-                public _LeftFront LeftFront { get; set; }
-
-                public partial class _LeftRear
-                {
-                    public string CornerWeight { get; set; }
-                    public string RideHeight { get; set; }
-                    public string FenderHeight { get; set; }
-                    public string SpringRate { get; set; }
-                    public string SpringPerchOffset { get; set; }
-                    public string BumpStiffness { get; set; }
-                    public string ReboundStiffness { get; set; }
-                    public string ToeIn { get; set; }
-                }
-
-                public _LeftRear LeftRear { get; set; }
-
-                public partial class _InCarDials
-                {
-                    public string BrakePressureBias { get; set; }
-                    public string BrakePads { get; set; }
-                    public string AbsSetting { get; set; }
-                    public string TcSetting { get; set; }
-                }
-
-                public _InCarDials InCarDials { get; set; }
-
-                public partial class _RightFront
-                {
-                    public string CornerWeight { get; set; }
-                    public string RideHeight { get; set; }
-                    public string FenderHeight { get; set; }
-                    public string SpringRate { get; set; }
-                    public string SpringPerchOffset { get; set; }
-                    public string BumpStiffness { get; set; }
-                    public string ReboundStiffness { get; set; }
-                    public string Camber { get; set; }
-                }
-
-                public _RightFront RightFront { get; set; }
-
-                public partial class _RightRear
-                {
-                    public string CornerWeight { get; set; }
-                    public string RideHeight { get; set; }
-                    public string FenderHeight { get; set; }
-                    public string SpringRate { get; set; }
-                    public string SpringPerchOffset { get; set; }
-                    public string BumpStiffness { get; set; }
-                    public string ReboundStiffness { get; set; }
-                    public string ToeIn { get; set; }
-                }
-
-                public _RightRear RightRear { get; set; }
-
-                public partial class _Rear
-                {
-                    public string FuelLevel { get; set; }
-                    public string ArbSize { get; set; }
-                    public long ArbSetting { get; set; }
-                    public long WingSetting { get; set; }
-                }
-
-                public _Rear Rear { get; set; }
-            }
-
-            public _Chassis Chassis { get; set; }
-        }
-
-        public _CarSetup CarSetup { get; set; }
     }
 }
