@@ -9,3 +9,4 @@ TestResult.xml
 .vs
 .idea
 iRacingSDK.nuspec
+publish.bat
