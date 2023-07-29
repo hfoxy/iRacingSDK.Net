@@ -44,7 +44,7 @@ namespace iRacingSDK
         {
             public partial class _Drivers
             {
-                public bool IsPaceCar { get { return this.CarIdx == 0; } }
+                public bool IsPaceCar { get { return this.CarIsPaceCar == 1; } }
             }
 
             _Drivers[] competingDrivers = null;

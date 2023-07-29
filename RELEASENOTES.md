@@ -1,3 +1,6 @@
+## Version 1.0.1.32
+- fix other IsPaceCar to actually check if the car is a pace car, instead of defaulting to Idx==0 check
+
 ## Version 1.0.1.31
 - fix IsPaceCar to actually check if the car is a pace car, instead of defaulting to Idx==0 check
 
